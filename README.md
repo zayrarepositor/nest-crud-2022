@@ -32,6 +32,18 @@
 $ npm install
 ```
 
+## Running docker db and prisma
+
+```bash
+# development
+# docker remove and compose up and prisma migrate deploy
+$ npm run db:dev:restart
+
+# development
+# running prisma
+$ npm run prisma
+```
+
 ## Running the app
 
 ```bash

@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "6a561ec2-24de-4772-8376-71f944916766",
+    "colId": "e78ddf68-ba8c-4ae8-b249-c55bf726b3ce",
+    "containerId": "",
+    "name": "POST auth/signup",
+    "url": "http://localhost:3001/auth/signup",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-12-07T23:18:36.475Z",
+    "modified": "2022-12-07T23:18:36.475Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "email",
+          "value": "user@email.com"
+        },
+        {
+          "name": "password",
+          "value": "123"
+        },
+        {
+          "name": "firstName",
+          "value": "user"
+        },
+        {
+          "name": "lastName",
+          "value": "lastname"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "67e174dc-c9d5-44db-a0c2-c758603e1e26",
+    "colId": "e78ddf68-ba8c-4ae8-b249-c55bf726b3ce",
+    "containerId": "",
+    "name": "POST auth/signin",
+    "url": "http://localhost:3001/auth/signin",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-12-07T23:18:36.506Z",
+    "modified": "2022-12-07T23:20:46.927Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "email",
+          "value": "user@email.com"
+        },
+        {
+          "name": "password",
+          "value": "1234"
+        },
+        {
+          "name": "firstName",
+          "value": "user"
+        },
+        {
+          "name": "lastName",
+          "value": "lastname"
+        }
+      ]
+    },
+    "tests": []
+  }
+]

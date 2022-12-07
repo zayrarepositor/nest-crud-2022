@@ -7,6 +7,7 @@ import { PrismaClientKnownRequestError } from "@prisma/client/runtime";
 @Injectable({})
 export class AuthService {
   constructor(private prisma: PrismaService) {}
+
   async signup(dto: AuthDto) {
     const hash = await argon.hash(dto.password);
     try {
@@ -30,7 +31,25 @@ export class AuthService {
       throw new Error(error);
     }
   }
-  signin() {
-    return { msg: "Sing in" };
+
+  async signin(dto: AuthDto) {
+    const user = await this.prisma.user.findUnique({
+      where: {
+        email: dto.email,
+      },
+    });
+
+    if (!user) {
+      throw new ForbiddenException("Credentials incorrect");
+    }
+
+    const passwordMatches = await argon.verify(user.hash, dto.password);
+
+    if (!passwordMatches) {
+      throw new ForbiddenException("Credentials incorrect");
+    }
+
+    delete user.hash;
+    return user;
   }
 }
