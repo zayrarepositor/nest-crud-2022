@@ -8,7 +8,7 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-12-07T23:18:36.475Z",
-    "modified": "2022-12-07T23:18:36.475Z",
+    "modified": "2022-12-09T21:02:28.301Z",
     "headers": [],
     "params": [],
     "body": {
@@ -17,7 +17,7 @@
       "form": [
         {
           "name": "email",
-          "value": "user@email.com"
+          "value": "user1@email.com"
         },
         {
           "name": "password",
@@ -44,7 +44,7 @@
     "method": "POST",
     "sortNum": 20000,
     "created": "2022-12-07T23:18:36.506Z",
-    "modified": "2022-12-07T23:20:46.927Z",
+    "modified": "2022-12-09T22:23:44.369Z",
     "headers": [],
     "params": [],
     "body": {
@@ -53,11 +53,11 @@
       "form": [
         {
           "name": "email",
-          "value": "user@email.com"
+          "value": "user1@email.com"
         },
         {
           "name": "password",
-          "value": "1234"
+          "value": "123"
         },
         {
           "name": "firstName",
@@ -66,6 +66,74 @@
         {
           "name": "lastName",
           "value": "lastname"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "dd301d91-b3ae-4092-945a-f1d31b62ca32",
+    "colId": "5ca04537-bc6b-4351-b985-6fcf8eae44b6",
+    "containerId": "",
+    "name": "GET users/me",
+    "url": "http://localhost:3001/users/me",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-12-10T01:17:56.019Z",
+    "modified": "2022-12-11T00:21:26.881Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidXNlcjFAZW1haWwuY29tIiwiaWF0IjoxNjcwNjQyMTAxLCJleHAiOjE2NzA2NDMwMDF9.9pDYlOkS660g00zB1xwZ_OtOd0Tm34G183u8XKHDkfw"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "60e6a990-bfa7-475e-8bf2-8f990d4c5e7f",
+    "colId": "a34ae03e-54e3-4427-b665-e5ea162c2d7e",
+    "containerId": "",
+    "name": "GET bookmarks/:id",
+    "url": "",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-12-11T00:22:20.880Z",
+    "modified": "2022-12-11T00:22:20.881Z",
+    "headers": []
+  },
+  {
+    "_id": "7e04a519-ca6d-4b23-8c84-80ab7ebd6cc5",
+    "colId": "a34ae03e-54e3-4427-b665-e5ea162c2d7e",
+    "containerId": "",
+    "name": "POST bookmarks",
+    "url": "http://localhost:3001/bookmarks",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-12-11T00:24:35.398Z",
+    "modified": "2022-12-11T00:29:38.637Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidXNlcjFAZW1haWwuY29tIiwiaWF0IjoxNjcwNzE4MTkwLCJleHAiOjE2NzA3MTkwOTB9.m6klrnOGhC7BzGI4JwQkHRAQTF9FfJOROuA5eO9MFUQ"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "title",
+          "value": "Le petit prince"
+        },
+        {
+          "name": "link",
+          "value": "http://bibliotecadigital.ilce.edu.mx/Colecciones/ObrasClasicas/_docs/ElPrincipito.pdf"
+        },
+        {
+          "name": "description",
+          "value": "A beautiful kid"
         }
       ]
     },
